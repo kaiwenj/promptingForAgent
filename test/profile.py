@@ -260,7 +260,8 @@ memoryStream.append(MemoryObject("2023-02-22 09:30:00, Lily Chen attended a fami
 memoryStream.append(MemoryObject("2023-02-22 12:00:00, Lily Chen took a cooking class to improve her culinary skills.", 5))
 lilyMemoryStream=memoryStream
 
-
+# Praline
+memoryStream=[]
 memoryStream.append(MemoryObject("2023-08-05 14:30:00, Praline gave a guided tour of the local history museum to a group of school children.", 7))
 memoryStream.append(MemoryObject("2023-08-12 09:00:00, Praline participated in a community cleanup event at the city park.", 5))
 memoryStream.append(MemoryObject("2023-08-19 17:45:00, Praline attended a lecture on ancient civilizations at the college auditorium.", 8))
@@ -281,6 +282,10 @@ memoryStream.append(MemoryObject("2023-11-22 20:00:00, Praline shared her travel
 memoryStream.append(MemoryObject("2023-12-01 09:00:00, Praline attended a workshop on archival research methods.", 7))
 memoryStream.append(MemoryObject("2023-12-08 14:30:00, Praline guided a group of tourists through a historic district.", 8))
 memoryStream.append(MemoryObject("2023-12-15 13:00:00, Praline volunteered at a holiday event for underprivileged families.", 9))
+pralineMemoryStream=memoryStream
+
+# Melina
+memoryStream=[]
 memoryStream.append(MemoryObject("2023-08-01 22:00:00, Melina intercepted a shipment of illegal weapons at the docks.", 9))
 memoryStream.append(MemoryObject("2023-08-07 10:00:00, Melina helped an elderly customer find items in the grocery store.", 6))
 memoryStream.append(MemoryObject("2023-08-13 02:00:00, Melina gathered intelligence on a suspected terrorist cell.", 8))
@@ -301,6 +306,10 @@ memoryStream.append(MemoryObject("2023-11-12 02:45:00, Melina decrypted a top-se
 memoryStream.append(MemoryObject("2023-11-19 16:00:00, Melina took her children to a local park for a picnic.", 6))
 memoryStream.append(MemoryObject("2023-11-27 23:15:00, Melina infiltrated a secure facility to obtain classified documents.", 10))
 memoryStream.append(MemoryObject("2023-12-03 09:00:00, Melina attended a training session at the grocery store.", 7))
+melinaMemoryStream=memoryStream
+
+# Jonathan
+memoryStream=[]
 memoryStream.append(MemoryObject("2023-08-01 08:30:00, Jonathan attended a board meeting to review quarterly financial reports.", 6))
 memoryStream.append(MemoryObject("2023-08-03 18:00:00, Jonathan took his family out for dinner at a local restaurant.", 7))
 memoryStream.append(MemoryObject("2023-08-05 09:00:00, Jonathan held a town hall meeting with his employees to address their concerns.", 8))
@@ -321,6 +330,7 @@ memoryStream.append(MemoryObject("2023-09-21 18:30:00, Jonathan attended his dau
 memoryStream.append(MemoryObject("2023-09-25 10:00:00, Jonathan participated in a charity golf tournament.", 7))
 memoryStream.append(MemoryObject("2023-09-28 11:30:00, Jonathan met with the IT department to discuss system upgrades.", 6))
 memoryStream.append(MemoryObject("2023-10-01 16:00:00, Jonathan took his family to a local amusement park for the day.", 9))
+jonathanMemoryStream=memoryStream
 
 
 
