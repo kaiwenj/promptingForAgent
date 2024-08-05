@@ -1,0 +1,173 @@
+﻿{
+  "name": "World",
+  "children": [
+    {
+      "name": "School Building",
+      "children": [
+        {
+          "name": "ClassRoom",
+          "children": [
+            {
+              "name": "Whiteboard",
+              "children": [
+                {
+                  "name": "Dry Erase Marker",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "DeskChair",
+              "children": [
+                {
+                  "name": "Laptops",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Teacher Desk",
+              "children": [
+                {
+                  "name": "Projector",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ClassRoom2",
+          "children": [
+            {
+              "name": "Whiteboard2",
+              "children": [
+                {
+                  "name": "DryEraseMarker2",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "DeskChair2",
+              "children": [
+                {
+                  "name": "Laptops2",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "TeacherDesk2",
+              "children": [
+                {
+                  "name": "Projector2",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ClassRoom3",
+          "children": [
+            {
+              "name": "Whiteboard3",
+              "children": [
+                {
+                  "name": "DryEraseMarker3",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "DeskChair3",
+              "children": [
+                {
+                  "name": "Laptops3",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "TeacherDesk3",
+              "children": [
+                {
+                  "name": "Projector3",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Courtyard",
+          "children": [
+            {
+              "name": "LunchTable",
+              "children": []
+            },
+            {
+              "name": "BasketballCourt",
+              "children": [
+                {
+                  "name": "Basketballs",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "TennisCourt",
+              "children": [
+                {
+                  "name": "TennisRackets",
+                  "children": []
+                },
+                {
+                  "name": "TennisBalls",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "TrackField",
+              "children": []
+            },
+            {
+              "name": "FootballField",
+              "children": [
+                {
+                  "name": "Footballs",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Pool",
+              "children": []
+            },
+            {
+              "name": "Garden",
+              "children": [
+                {
+                  "name": "TomatoePlant",
+                  "children": []
+                },
+                {
+                  "name": "LemonTree",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "display_tree": "function to display the tree structure",
+    "add_node": "function to add a node to the tree",
+    "delete_node": "function to delete a node from the tree",
+    "modify_node": "function to modify a node in the tree"
+  }
+}
