@@ -45,7 +45,6 @@ socket.on('disconnect', () => {
 
 socket.on('updateLocation', (location) => {
     console.log('Updated location received:', location);
-    
 });
 
 
@@ -59,19 +58,16 @@ function emitAgentLocation() {
     }
 }
 
-
 function preload() {
     console.log('Loading assets...');
     this.load.image('grass', 'assets/grass.png');
     this.load.image('house1', 'assets/house1.png');
-    // this.load.image('arrow', 'assets/arrow.png');
+    this.load.image('school', 'assets/school.png');
     this.load.spritesheet('dude', 'assets/person.png', { frameWidth: 300, frameHeight: 400 });
-//     this.load.image('cafe', 'assets/cafe.png');
-//     this.load.image('school', 'assets/school.png');
- }
+}
 
 // Define the `agent` variable and other variables
-var agent, houses = [], cursors, target, path = [], pathIndex = 0, grid, pathGraphics, easystar, moveToTarget = false, lastPathCalculationTime = 0;
+var agent, objects = [], cursors, target, path = [], pathIndex = 0, grid, pathGraphics, easystar, moveToTarget = false, lastPathCalculationTime = 0;
 var pathCalculationInterval = 1000; // Recalculate path every 1000 ms
 
 // Create the game scene
@@ -81,11 +77,14 @@ function create() {
     easystar = new EasyStar.js();
     easystar.setGrid(grid);
     easystar.setAcceptableTiles([0]);
-    addHouse.call(this, 200, 300, 'house1');
-    addHouse.call(this, 600, 400, 'house2');
-    addHouse.call(this, 900, 600, 'house3');
-    // addCafe.call(this, 300, 200);
-    // addSchool.call(this, 500, 500);
+
+    // Add houses
+    addObject.call(this, 200, 300, 'house1', 'house1');
+    addObject.call(this, 600, 400, 'house2', 'house1');
+    addObject.call(this, 900, 600, 'house3', 'house1');
+    
+    // Add the school
+    addObject.call(this, 800, 100, 'school1', 'school');
 
     // Initialize agent
     agent = this.physics.add.sprite(25, 25, 'dude');
@@ -110,8 +109,8 @@ function create() {
     });
 
     // Collision detection
-    houses.forEach(house => {
-        this.physics.add.collider(agent, house.sprite, handleCollision, null, this);
+    objects.forEach(object => {
+        this.physics.add.collider(agent, object.sprite, handleCollision, null, this);
     });
 
     cursors = this.input.keyboard.createCursorKeys();
@@ -121,11 +120,10 @@ function create() {
     // Keyboard input handling
     this.input.keyboard.on('keydown', (event) => {
         switch (event.key) {
-            case '1': setTargetHouse.call(this, 'house1'); break;
-            case '2': setTargetHouse.call(this, 'house2'); break;
-            case '3': setTargetHouse.call(this, 'house3'); break;
-            // case '4': setTargetHouse.call(this, 'cafe'); break;
-            // case '5': setTargetHouse.call(this, 'school'); break;
+            case '1': setTargetObject.call(this, 'house1'); break;
+            case '2': setTargetObject.call(this, 'house2'); break;
+            case '3': setTargetObject.call(this, 'house3'); break;
+            case '5': setTargetObject.call(this, 'school1'); break;
             case '6': setTargetBottomRight.call(this); break;
         }
     });
@@ -157,28 +155,12 @@ function update(time, delta) {
 
 // Additional helper functions...
 
-function addHouse(x, y, id) {
-    var house = { id: id, sprite: this.physics.add.image(x, y, 'house1').setImmovable(true).setScale(0.5) };
-    houses.push(house);
-    var houseX = Math.floor(x / 50);
-    var houseY = Math.floor(y / 50);
-    grid[houseY][houseX] = 1;
-}
-
-function addCafe(x, y) {
-    var cafe = { id: 'cafe', sprite: this.physics.add.image(x, y, 'cafe').setImmovable(true).setScale(0.5) };
-    houses.push(cafe);
-    var cafeX = Math.floor(x / 50);
-    var cafeY = Math.floor(y / 50);
-    grid[cafeY][cafeX] = 1;
-}
-
-function addSchool(x, y) {
-    var school = { id: 'school', sprite: this.physics.add.image(x, y, 'school').setImmovable(true).setScale(0.5) };
-    houses.push(school);
-    var schoolX = Math.floor(x / 50);
-    var schoolY = Math.floor(y / 50);
-    grid[schoolY][schoolX] = 1;
+function addObject(x, y, id, image) {
+    var object = { id: id, sprite: this.physics.add.image(x, y, image).setImmovable(true).setScale(0.5) };
+    objects.push(object);
+    var objX = Math.floor(x / 50);
+    var objY = Math.floor(y / 50);
+    grid[objY][objX] = 1;
 }
 
 function createGrid(cols, rows) {
@@ -193,12 +175,12 @@ function createGrid(cols, rows) {
     return grid;
 }
 
-function setTargetHouse(houseId) {
-    var house = houses.find(h => h.id === houseId);
-    if (house) {
-        var houseX = Math.floor(house.sprite.x / 50);
-        var houseY = Math.floor(house.sprite.y / 50);
-        target = new Phaser.Math.Vector2(houseX * 50 + 25, (houseY + 1) * 50 + 25);
+function setTargetObject(objectId) {
+    var object = objects.find(obj => obj.id === objectId);
+    if (object) {
+        var objX = Math.floor(object.sprite.x / 50);
+        var objY = Math.floor(object.sprite.y / 50);
+        target = new Phaser.Math.Vector2(objX * 50 + 25, (objY + 1) * 50 + 25);
         moveToTarget = true;
         calculatePath.call(this);
     }
@@ -212,10 +194,10 @@ function setTargetBottomRight() {
 
 function calculatePath() {
     grid = createGrid(28, 16);
-    houses.forEach(house => {
-        var houseX = Math.floor(house.sprite.x / 50);
-        var houseY = Math.floor(house.sprite.y / 50);
-        grid[houseY][houseX] = 1;
+    objects.forEach(object => {
+        var objX = Math.floor(object.sprite.x / 50);
+        var objY = Math.floor(object.sprite.y / 50);
+        grid[objY][objX] = 1;
     });
     drawGrid.call(this);
     easystar.setGrid(grid);
@@ -242,32 +224,9 @@ function drawGrid() {
     }
 }
 
-function handleCollision(agent, house) {
+function handleCollision(agent, object) {
     calculatePath.call(this);
 }
-
-
-// function drawPath(path) {
-//     pathGraphics.clear(); // Clear previous path
-//     pathGraphics.lineStyle(2, 0x0000ff, 1); // Blue color for path lines
-
-//     for (var i = 0; i < path.length - 1; i++) {
-//         var fromX = path[i].x * 50 + 25;
-//         var fromY = path[i].y * 50 + 25;
-//         var toX = path[i + 1].x * 50 + 25;
-//         var toY = path[i + 1].y * 50 + 25;
-
-//         // Draw a line segment for each step in the path
-//         pathGraphics.moveTo(fromX, fromY);
-//         pathGraphics.lineTo(toX, toY);
-
-//         // Optionally, add an arrow or some visual indicator
-//         var angle = Phaser.Math.Angle.Between(fromX, fromY, toX, toY);
-//         var arrow = this.add.image((fromX + toX) / 2, (fromY + toY) / 2, 'arrow').setRotation(angle).setScale(0.5);
-//     }
-//     pathGraphics.strokePath();
-// }
-
 
 
 
