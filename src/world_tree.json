@@ -1,0 +1,2684 @@
+{
+    "name": "World",
+    "type": "location",
+    "contents": [],
+    "actors": [],
+    "children": [
+        {
+            "name": "Bar Building",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "Table",
+                    "type": "object",
+                    "status": "Clean",
+                    "contents": [],
+                    "children": [
+                        {
+                            "name": "Chair",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Bar Counter",
+                    "type": "object",
+                    "status": "Wiped",
+                    "contents": [],
+                    "children": [
+                        {
+                            "name": "Register",
+                            "type": "object",
+                            "status": "Functional",
+                            "contents": []
+                        },
+                        {
+                            "name": "Bar Stool",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Drink Menu",
+                    "type": "object",
+                    "status": "Not in use, [description of menu items] Drinks: Beer, Wine, Whiskey, Vodka, Rum, Tequila, Gin | Cocktails: Margarita, Mojito, Martini, Old Fashioned, Daiquiri, Manhattan",
+                    "contents": [],
+                    "children": [
+                        {
+                            "name": "Beer",
+                            "type": "object",
+                            "status": "Chilled",
+                            "contents": []
+                        },
+                        {
+                            "name": "Wine",
+                            "type": "object",
+                            "status": "Chilled",
+                            "contents": []
+                        },
+                        {
+                            "name": "Whiskey",
+                            "type": "object",
+                            "status": "Room Temperature",
+                            "contents": []
+                        },
+                        {
+                            "name": "Vodka",
+                            "type": "object",
+                            "status": "Chilled",
+                            "contents": []
+                        },
+                        {
+                            "name": "Rum",
+                            "type": "object",
+                            "status": "Room Temperature",
+                            "contents": []
+                        },
+                        {
+                            "name": "Tequila",
+                            "type": "object",
+                            "status": "Chilled",
+                            "contents": []
+                        },
+                        {
+                            "name": "Gin",
+                            "type": "object",
+                            "status": "Chilled",
+                            "contents": []
+                        },
+                        {
+                            "name": "Cocktails",
+                            "type": "object",
+                            "status": "Ready to Mix",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Margarita",
+                                    "type": "object",
+                                    "status": "Not Prepared",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Mojito",
+                                    "type": "object",
+                                    "status": "Not Prepared",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Martini",
+                                    "type": "object",
+                                    "status": "Not Prepared",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Old Fashioned",
+                                    "type": "object",
+                                    "status": "Not Prepared",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Daiquiri",
+                                    "type": "object",
+                                    "status": "Not Prepared",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Manhattan",
+                                    "type": "object",
+                                    "status": "Not Prepared",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Snacks Menu",
+                    "type": "object",
+                    "status": "Not in use, [description of snacks] Peanuts, Chips, Pretzels, Popcorn, Nachos, Buffalo Wings, Onion Rings",
+                    "contents": [],
+                    "children": [
+                        {
+                            "name": "Peanuts",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Chips",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Pretzels",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Popcorn",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Nachos",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Buffalo Wings",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Onion Rings",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cafe Building",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "Table",
+                    "type": "object",
+                    "status": "Clean",
+                    "contents": [],
+                    "children": [
+                        {
+                            "name": "Chair",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Register",
+                    "type": "object",
+                    "status": "Functional",
+                    "contents": []
+                },
+                {
+                    "name": "Coffee Making Bar",
+                    "type": "object",
+                    "status": "Ready",
+                    "contents": [],
+                    "children": [
+                        {
+                            "name": "Coffee Maker",
+                            "type": "object",
+                            "status": "Off",
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Cafe Menu",
+                    "type": "object",
+                    "status": "Not in use, [description of menu items] Coffee: Espresso, Cafe Cubano, Americano, Latte, Cappuccino, Macchiato, Mocha, Flat White, Cortado, Ristretto, Lungo, Affogato, Red Eye, Black Eye, Doppio, Cafe au Lait, Irish Coffee, Turkish Coffee, Cold Brew, Nitro Coffee, Iced Coffee, Frappe, Vienna Coffee, Breve, Drip Coffee",
+                    "contents": [],
+                    "children": [
+                        {
+                            "name": "Espresso",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Caf\u00e9 Cubano",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Americano",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Latte",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Cappuccino",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Macchiato",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Mocha",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Flat White",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Cortado",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Ristretto",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Lungo",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Affogato",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Red Eye",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Black Eye",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Doppio",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Caf\u00e9 au Lait",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Irish Coffee",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Turkish Coffee",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Cold Brew",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Nitro Coffee",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Iced Coffee",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Frappe",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Vienna Coffee",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Breve",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        },
+                        {
+                            "name": "Drip Coffee",
+                            "type": "object",
+                            "status": "Available",
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Baked Goods Menu",
+                    "type": "object",
+                    "status": "Not in use, [description of baked goods] Chocolate Chip Cookies, Oatmeal Raisin Cookies, Sugar Cookies, Gingerbread Cookies, Croissant, Danish, Pain au Chocolat, Baguette, Blueberry Muffins, Banana Muffins, Chocolate Muffins, Vanilla Cupcakes, Red Velvet Cupcakes, Apple Pie, Pumpkin Pie, Glazed Doughnuts",
+                    "contents": [],
+                    "children": [
+                        {
+                            "name": "Chocolate Chip Cookies",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Oatmeal Raisin Cookies",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Sugar Cookies",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Gingerbread Cookies",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Croissant",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Danish",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Pain au Chocolat",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Baguette",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Blueberry Muffins",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Banana Muffins",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Chocolate Muffins",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Vanilla Cupcakes",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Red Velvet Cupcakes",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Apple Pie",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Pumpkin Pie",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        },
+                        {
+                            "name": "Glazed Doughnuts",
+                            "type": "object",
+                            "status": "Fresh",
+                            "contents": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Clothing Store",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "Men's Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Tops",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Shirt",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "T-Shirt",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sweater",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bottoms",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Jeans",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Shorts",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Trousers",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Footwear",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Sneakers",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Boots",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sandals",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Women's Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Tops",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Blouse",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "T-Shirt",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sweater",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bottoms",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Jeans",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Shorts",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Skirt",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Footwear",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Sneakers",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Boots",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Heels",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Children's Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Tops",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Shirt",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "T-Shirt",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sweater",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bottoms",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Jeans",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Shorts",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Trousers",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Footwear",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Sneakers",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Boots",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sandals",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "College",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "Administrative Building",
+                    "type": "location",
+                    "contents": [],
+                    "actors": []
+                },
+                {
+                    "name": "Library",
+                    "type": "location",
+                    "contents": [],
+                    "actors": []
+                },
+                {
+                    "name": "Science Building",
+                    "type": "location",
+                    "contents": [],
+                    "actors": []
+                },
+                {
+                    "name": "Lecture Hall",
+                    "type": "location",
+                    "contents": [],
+                    "actors": []
+                },
+                {
+                    "name": "Cafeteria",
+                    "type": "location",
+                    "contents": [],
+                    "actors": []
+                },
+                {
+                    "name": "Gym",
+                    "type": "location",
+                    "contents": [],
+                    "actors": []
+                },
+                {
+                    "name": "Dorm Buildings",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Dorm A",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Room 101",
+                                    "type": "location",
+                                    "contents": [],
+                                    "actors": []
+                                },
+                                {
+                                    "name": "Room 102",
+                                    "type": "location",
+                                    "contents": [],
+                                    "actors": []
+                                },
+                                {
+                                    "name": "Room 103",
+                                    "type": "location",
+                                    "contents": [],
+                                    "actors": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Dorm B",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Room 201",
+                                    "type": "location",
+                                    "contents": [],
+                                    "actors": []
+                                },
+                                {
+                                    "name": "Room 202",
+                                    "type": "location",
+                                    "contents": [],
+                                    "actors": []
+                                },
+                                {
+                                    "name": "Room 203",
+                                    "type": "location",
+                                    "contents": [],
+                                    "actors": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Dorm C",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Room 301",
+                                    "type": "location",
+                                    "contents": [],
+                                    "actors": []
+                                },
+                                {
+                                    "name": "Room 302",
+                                    "type": "location",
+                                    "contents": [],
+                                    "actors": []
+                                },
+                                {
+                                    "name": "Room 303",
+                                    "type": "location",
+                                    "contents": [],
+                                    "actors": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Convenience Store",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "Snacks Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Chips",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Potato Chips",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Corn Chips",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Pretzels",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Candy",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Chocolate",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Gummies",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Hard Candy",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Beverages Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Soft Drinks",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Cola",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Lemonade",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Orange Soda",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Juices",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Apple Juice",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Orange Juice",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Grape Juice",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Water",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Still Water",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sparkling Water",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Household Items Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Cleaning Supplies",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Detergent",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Bleach",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Disinfectant Wipes",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Paper Products",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Toilet Paper",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Paper Towels",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Napkins",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Personal Care Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Skincare",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Moisturizer",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sunscreen",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Cleanser",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Haircare",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Shampoo",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Conditioner",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Hair Oil",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Oral Care",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Toothpaste",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Mouthwash",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Toothbrush",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Department Store",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "Clothing Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Men's Clothing",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Shirts",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Pants",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Suits",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Women's Clothing",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Dresses",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Blouses",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Skirts",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Kids' Clothing",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "T-Shirts",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Shorts",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Jackets",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Electronics Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Computers",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Laptops",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Desktops",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Tablets",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Home Entertainment",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Televisions",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sound Systems",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Streaming Devices",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Appliances",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Refrigerators",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Microwaves",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Washers",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Home Goods Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Furniture",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Sofas",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Beds",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Dining Tables",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Kitchenware",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Cookware",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Cutlery",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Dinnerware",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Decor",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Rugs",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Lamps",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Wall Art",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Personal Care Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Skincare",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Moisturizer",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sunscreen",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Cleanser",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Haircare",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Shampoo",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Conditioner",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Hair Oil",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Oral Care",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Toothpaste",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Mouthwash",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Toothbrush",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Gardening Store",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "Plants Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Indoor Plants",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Fern",
+                                    "type": "object",
+                                    "status": "Healthy",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Succulent",
+                                    "type": "object",
+                                    "status": "Healthy",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Snake Plant",
+                                    "type": "object",
+                                    "status": "Healthy",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Outdoor Plants",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Rose",
+                                    "type": "object",
+                                    "status": "Blooming",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Lavender",
+                                    "type": "object",
+                                    "status": "Fragrant",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Tulip",
+                                    "type": "object",
+                                    "status": "Blooming",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Gardening Tools Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Hand Tools",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Trowel",
+                                    "type": "object",
+                                    "status": "New",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Hand Rake",
+                                    "type": "object",
+                                    "status": "New",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Pruning Shears",
+                                    "type": "object",
+                                    "status": "Used",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Power Tools",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Lawn Mower",
+                                    "type": "object",
+                                    "status": "Operational",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Leaf Blower",
+                                    "type": "object",
+                                    "status": "Operational",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Hedge Trimmer",
+                                    "type": "object",
+                                    "status": "Operational",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Fertilizers Section",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Organic Fertilizers",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Compost",
+                                    "type": "object",
+                                    "status": "Fresh",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Manure",
+                                    "type": "object",
+                                    "status": "Fresh",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Bone Meal",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Chemical Fertilizers",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "NPK Fertilizer",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Urea",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Ammonium Nitrate",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Neighborhood",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "House 1",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Kitchen",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Living Room",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Bedroom 1",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bedroom 2",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bedroom 3",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "House 2",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Kitchen",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Living Room",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Bedroom 1",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bedroom 2",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bedroom 3",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "House 3",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Kitchen",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Living Room",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Garden",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Bedroom 1",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bedroom 2",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bedroom 3",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "House 4",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Kitchen",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Living Room",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Garden",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Bedroom 1",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bedroom 2",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bedroom 3",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Bed",
+                                    "type": "object",
+                                    "status": "None",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Park Area",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "Playground",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Slide",
+                            "type": "object",
+                            "status": "None",
+                            "contents": []
+                        },
+                        {
+                            "name": "Swing",
+                            "type": "object",
+                            "status": "None",
+                            "contents": []
+                        },
+                        {
+                            "name": "Sandbox",
+                            "type": "object",
+                            "status": "None",
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Picnic Area",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Picnic Table",
+                            "type": "object",
+                            "status": "None",
+                            "contents": []
+                        },
+                        {
+                            "name": "BBQ Grill",
+                            "type": "object",
+                            "status": "None",
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Walking Trail",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Bench",
+                            "type": "object",
+                            "status": "None",
+                            "contents": []
+                        },
+                        {
+                            "name": "Trash Can",
+                            "type": "object",
+                            "status": "None",
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Pond",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Duck",
+                            "type": "object",
+                            "status": "Swimming",
+                            "contents": []
+                        },
+                        {
+                            "name": "Fish",
+                            "type": "object",
+                            "status": "Swimming",
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Flower Garden",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Rose",
+                            "type": "object",
+                            "status": "Blooming",
+                            "contents": []
+                        },
+                        {
+                            "name": "Tulip",
+                            "type": "object",
+                            "status": "Blooming",
+                            "contents": []
+                        },
+                        {
+                            "name": "Daffodil",
+                            "type": "object",
+                            "status": "Blooming",
+                            "contents": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Pharmacy",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "Over-the-Counter Medications",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Pain Relievers",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Aspirin",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Ibuprofen",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Acetaminophen",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Cold and Flu",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Cough Syrup",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Decongestant",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Antihistamine",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Digestive Health",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Antacid",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Laxative",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Probiotic",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Prescription Medications",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Antibiotics",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Amoxicillin",
+                                    "type": "object",
+                                    "status": "Prescription Required",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Ciprofloxacin",
+                                    "type": "object",
+                                    "status": "Prescription Required",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Blood Pressure Medications",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Lisinopril",
+                                    "type": "object",
+                                    "status": "Prescription Required",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Amlodipine",
+                                    "type": "object",
+                                    "status": "Prescription Required",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Diabetes Medications",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Metformin",
+                                    "type": "object",
+                                    "status": "Prescription Required",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Insulin",
+                                    "type": "object",
+                                    "status": "Prescription Required",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Personal Care Products",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Skincare",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Moisturizer",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Sunscreen",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Cleanser",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Haircare",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Shampoo",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Conditioner",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Hair Oil",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Oral Care",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Toothpaste",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Mouthwash",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Toothbrush",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Vitamins and Supplements",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Multivitamins",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Adult Multivitamin",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Children's Multivitamin",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Mineral Supplements",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Calcium",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Magnesium",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Herbal Supplements",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Echinacea",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Ginseng",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "School Building",
+            "type": "location",
+            "contents": [],
+            "actors": [],
+            "children": [
+                {
+                    "name": "ClassRoom",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Whiteboard",
+                            "type": "object",
+                            "status": "Clean",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Dry Erase Marker",
+                                    "type": "object",
+                                    "status": "Capped",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Desk Chair",
+                            "type": "object",
+                            "status": "Arranged",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Laptops",
+                                    "type": "object",
+                                    "status": "Charged",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Teacher Desk",
+                            "type": "object",
+                            "status": "Organized",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Projector",
+                                    "type": "object",
+                                    "status": "Off",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ClassRoom2",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Whiteboard2",
+                            "type": "object",
+                            "status": "Clean",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Dry Erase Marker",
+                                    "type": "object",
+                                    "status": "Capped",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Desk Chair",
+                            "type": "object",
+                            "status": "Arranged",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Laptops",
+                                    "type": "object",
+                                    "status": "Charged",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Teacher Desk",
+                            "type": "object",
+                            "status": "Organized",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Projector",
+                                    "type": "object",
+                                    "status": "Off",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ClassRoom3",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Whiteboard3",
+                            "type": "object",
+                            "status": "Clean",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Dry Erase Marker",
+                                    "type": "object",
+                                    "status": "Capped",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Desk Chair",
+                            "type": "object",
+                            "status": "Arranged",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Laptops",
+                                    "type": "object",
+                                    "status": "Charged",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Teacher Desk",
+                            "type": "object",
+                            "status": "Organized",
+                            "contents": [],
+                            "children": [
+                                {
+                                    "name": "Projector",
+                                    "type": "object",
+                                    "status": "Off",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Courtyard",
+                    "type": "location",
+                    "contents": [],
+                    "actors": [],
+                    "children": [
+                        {
+                            "name": "Lunch Table",
+                            "type": "object",
+                            "status": "Clean",
+                            "contents": []
+                        },
+                        {
+                            "name": "Basketball Court",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Basketballs",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Tennis Court",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Tennis Rackets",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Tennis Balls",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Track Field",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Football Field",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Footballs",
+                                    "type": "object",
+                                    "status": "Available",
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pool",
+                            "type": "location",
+                            "contents": [],
+                            "actors": []
+                        },
+                        {
+                            "name": "Garden",
+                            "type": "location",
+                            "contents": [],
+                            "actors": [],
+                            "children": [
+                                {
+                                    "name": "Tomato Plant",
+                                    "type": "object",
+                                    "status": "Growing",
+                                    "contents": []
+                                },
+                                {
+                                    "name": "Lemon Tree",
+                                    "type": "object",
+                                    "status": "Bearing Fruit",
+                                    "contents": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

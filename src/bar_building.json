@@ -1,0 +1,186 @@
+{
+    "name": "Bar Building",
+    "type": "location",
+    "contents": [],
+    "actors": [],
+    "children": [
+        {
+            "name": "Table",
+            "type": "object",
+            "status": "Clean",
+            "contents": [],
+            "children": [
+                {
+                    "name": "Chair",
+                    "type": "object",
+                    "status": "Available",
+                    "contents": []
+                }
+            ]
+        },
+        {
+            "name": "Bar Counter",
+            "type": "object",
+            "status": "Wiped",
+            "contents": [],
+            "children": [
+                {
+                    "name": "Register",
+                    "type": "object",
+                    "status": "Functional",
+                    "contents": []
+                },
+                {
+                    "name": "Bar Stool",
+                    "type": "object",
+                    "status": "Available",
+                    "contents": []
+                }
+            ]
+        },
+        {
+            "name": "Drink Menu",
+            "type": "object",
+            "status": "Not in use, [description of menu items] Drinks: Beer, Wine, Whiskey, Vodka, Rum, Tequila, Gin | Cocktails: Margarita, Mojito, Martini, Old Fashioned, Daiquiri, Manhattan",
+            "contents": [],
+            "children": [
+                {
+                    "name": "Beer",
+                    "type": "object",
+                    "status": "Chilled",
+                    "contents": []
+                },
+                {
+                    "name": "Wine",
+                    "type": "object",
+                    "status": "Chilled",
+                    "contents": []
+                },
+                {
+                    "name": "Whiskey",
+                    "type": "object",
+                    "status": "Room Temperature",
+                    "contents": []
+                },
+                {
+                    "name": "Vodka",
+                    "type": "object",
+                    "status": "Chilled",
+                    "contents": []
+                },
+                {
+                    "name": "Rum",
+                    "type": "object",
+                    "status": "Room Temperature",
+                    "contents": []
+                },
+                {
+                    "name": "Tequila",
+                    "type": "object",
+                    "status": "Chilled",
+                    "contents": []
+                },
+                {
+                    "name": "Gin",
+                    "type": "object",
+                    "status": "Chilled",
+                    "contents": []
+                },
+                {
+                    "name": "Cocktails",
+                    "type": "object",
+                    "status": "Ready to Mix",
+                    "contents": [],
+                    "children": [
+                        {
+                            "name": "Margarita",
+                            "type": "object",
+                            "status": "Not Prepared",
+                            "contents": []
+                        },
+                        {
+                            "name": "Mojito",
+                            "type": "object",
+                            "status": "Not Prepared",
+                            "contents": []
+                        },
+                        {
+                            "name": "Martini",
+                            "type": "object",
+                            "status": "Not Prepared",
+                            "contents": []
+                        },
+                        {
+                            "name": "Old Fashioned",
+                            "type": "object",
+                            "status": "Not Prepared",
+                            "contents": []
+                        },
+                        {
+                            "name": "Daiquiri",
+                            "type": "object",
+                            "status": "Not Prepared",
+                            "contents": []
+                        },
+                        {
+                            "name": "Manhattan",
+                            "type": "object",
+                            "status": "Not Prepared",
+                            "contents": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Snacks Menu",
+            "type": "object",
+            "status": "Not in use, [description of snacks] Peanuts, Chips, Pretzels, Popcorn, Nachos, Buffalo Wings, Onion Rings",
+            "contents": [],
+            "children": [
+                {
+                    "name": "Peanuts",
+                    "type": "object",
+                    "status": "Fresh",
+                    "contents": []
+                },
+                {
+                    "name": "Chips",
+                    "type": "object",
+                    "status": "Fresh",
+                    "contents": []
+                },
+                {
+                    "name": "Pretzels",
+                    "type": "object",
+                    "status": "Fresh",
+                    "contents": []
+                },
+                {
+                    "name": "Popcorn",
+                    "type": "object",
+                    "status": "Fresh",
+                    "contents": []
+                },
+                {
+                    "name": "Nachos",
+                    "type": "object",
+                    "status": "Fresh",
+                    "contents": []
+                },
+                {
+                    "name": "Buffalo Wings",
+                    "type": "object",
+                    "status": "Fresh",
+                    "contents": []
+                },
+                {
+                    "name": "Onion Rings",
+                    "type": "object",
+                    "status": "Fresh",
+                    "contents": []
+                }
+            ]
+        }
+    ]
+}
