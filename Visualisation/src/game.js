@@ -1,18 +1,20 @@
 // remember to bundle the game.js to bundle.js as browser does not support require function used in Node.js
-//browserify src/game.js -o public/bundle.js
+// browserify src/game.js -o public/bundle.js
+// 'assets/the_ville/visuals/the_ville collision.png'
 
-// Import required libraries
+//sth wrong with the agent?
+//make sure to paint the path black
+//map certain locations coordinates to name of loactions
+//2 mappings
+
 const Phaser = require('phaser');
-const io = require('socket.io-client');
 const EasyStar = require('easystarjs');
-
-console.log('Script loaded');
 
 // Phaser game configuration
 var config = {
     type: Phaser.AUTO,
-    width: 1400,
-    height: 800,
+    width: 1080,
+    height: 770,
     physics: {
         default: 'arcade',
         arcade: {
@@ -28,208 +30,227 @@ var config = {
 };
 
 var game = new Phaser.Game(config);
+const TILE_SIZE = 1;
+let agents = [];
+let easystar;
+let grid = [];
+let cursors;
 
-// Socket.io client setup
-const socket = io('http://localhost:4000');
+function preload() {
+    this.load.image('collisionMap', 'assets/the_ville/visuals/resized_collision_map.png');
+    this.load.image('Abigail_Chen', 'assets/characters/profile/Abigail_Chen.png');
+    this.load.image('Adam_Smith', 'assets/characters/profile/Adam_Smith.png');
+}
 
-socket.on('connect', () => {
-    console.log('Connected to the server');
-    socket.emit('testConnection', 'Hello, server!', (response) => {
-        console.log('Server acknowledged with:', response);
-    });
-});
+function create() {
+    easystar = new EasyStar.js();
+    easystar.setAcceptableTiles([0]);
 
-socket.on('disconnect', () => {
-    console.log('Disconnected from the server');
-});
+    createCollisionFromImageData(this, 'collisionMap', TILE_SIZE);
+    this.add.image(0, 0, 'collisionMap').setOrigin(0, 0);
 
-socket.on('updateLocation', (location) => {
-    console.log('Updated location received:', location);
-});
+    agents.push(createAgent.call(this, 'Abigail_Chen'));
+    agents.push(createAgent.call(this, 'Adam_Smith'));
 
+    cursors = this.input.keyboard.createCursorKeys();
 
-function emitAgentLocation() {
+    
+    // const graphics = scene.add.graphics();
+    // graphics.fillStyle(0x000000, 1);
+    // for (let y = 0; y < width; y++){
+        
+    //     graphics.fillRect(0, y, 50, 50);
+    // }
+    // console.log('black')
+
+    setInterval(() => {
+        agents.forEach(agent => emitAgentLocation(agent));
+    }, 4000);
+
+    // Print the grid in the console
+    printGrid();
+}
+
+function update() {
+    if (cursors.left.isDown) {
+        moveAgentManually(agents[0], -1, 0);
+    } else if (cursors.right.isDown) {
+        moveAgentManually(agents[0], 1, 0);
+    } else if (cursors.up.isDown) {
+        moveAgentManually(agents[0], 0, -1);
+    } else if (cursors.down.isDown) {
+        moveAgentManually(agents[0], 0, 1);
+    }
+}
+
+function createCollisionFromImageData(scene, collisionMapKey, tileSize) {
+    const collisionTexture = scene.textures.get(collisionMapKey).getSourceImage();
+    const collisionCanvas = scene.textures.createCanvas('collisionCanvas', collisionTexture.width, collisionTexture.height);
+    collisionCanvas.draw(0, 0, collisionTexture);
+
+    const gridWidth = Math.floor(collisionTexture.width / tileSize);
+    const gridHeight = Math.floor(collisionTexture.height / tileSize);
+    grid = new Array(gridHeight).fill(0).map(() => new Array(gridWidth).fill(0));
+
+    for (let y = 0; y < gridHeight; y++) {
+        for (let x = 0; x < gridWidth; x++) {
+            const pixel = collisionCanvas.getPixel(x * tileSize, y * tileSize);
+
+            if (isPink(pixel, 230, 0, 196, 255, 100)) {
+                markSurroundingTilesUnwalkable(grid, x, y, gridWidth, gridHeight);
+            }
+        }
+    }
+
+    easystar.setGrid(grid);
+    visualizeUnwalkableTiles(scene, grid, tileSize);
+}
+
+function isPink(pixel, targetR, targetG, targetB, targetA, tolerance) {
+    return (
+        Math.abs(pixel.r - targetR) <= tolerance &&
+        Math.abs(pixel.g - targetG) <= tolerance &&
+        Math.abs(pixel.b - targetB) <= tolerance &&
+        Math.abs(pixel.a - targetA) <= tolerance
+    );
+}
+
+function markSurroundingTilesUnwalkable(grid, x, y, gridWidth, gridHeight) {
+    for (let dy = -2; dy <= 2; dy++) {
+        for (let dx = -2; dx <= 2; dx++) {
+            const nx = x + dx;
+            const ny = y + dy;
+
+            if (nx >= 0 && nx < gridWidth && ny >= 0 && ny < gridHeight) {
+                grid[ny][nx] = 1;
+            }
+        }
+    }
+}
+
+function visualizeUnwalkableTiles(scene, grid, tileSize) {
+   
+    const graphics = scene.add.graphics();
+    graphics.fillStyle(0x000000, 1);
+
+    for (let y = 0; y < grid.length; y++) {
+        for (let x = 0; x < grid[y].length; x++) {
+            if (grid[y][x] === 1) {
+                const rectX = x * tileSize;
+                const rectY = y * tileSize;
+                graphics.fillRect(rectX, rectY, tileSize, tileSize);
+            }
+        }
+    }
+}
+
+function createAgent(spriteKey) {
+    let gridX = Phaser.Math.Between(0, Math.floor(config.width / TILE_SIZE) - 1);
+    let gridY = Phaser.Math.Between(0, Math.floor(config.height / TILE_SIZE) - 1);
+
+    while (grid[gridY][gridX] === 1) {
+        gridX = Phaser.Math.Between(0, Math.floor(config.width / TILE_SIZE) - 1);
+        gridY = Phaser.Math.Between(0, Math.floor(config.height / TILE_SIZE) - 1);
+    }
+
+    const x = gridX * TILE_SIZE + TILE_SIZE / 2;
+    const y = gridY * TILE_SIZE + TILE_SIZE / 2;
+
+    const sprite = this.physics.add.sprite(x, y, spriteKey);
+    sprite.setCollideWorldBounds(true);
+    sprite.setScale(0.5);
+
+    return { name: spriteKey, sprite: sprite, gridX, gridY };
+}
+
+function moveAgentManually(agent, deltaX, deltaY) {
     if (agent) {
-        var agentLocation = { x: agent.x, y: agent.y };
-        console.log('Emitting location:', agentLocation);
-        socket.emit('agentLocation', agentLocation);
+        const newGridX = agent.gridX + deltaX;
+        const newGridY = agent.gridY + deltaY;
+
+        if (
+            newGridX >= 0 && newGridX < grid[0].length && 
+            newGridY >= 0 && newGridY < grid.length && 
+            grid[newGridY][newGridX] === 0
+        ) {
+            agent.gridX = newGridX;
+            agent.gridY = newGridY;
+            
+            const newX = newGridX * TILE_SIZE + TILE_SIZE / 2;
+            const newY = newGridY * TILE_SIZE + TILE_SIZE / 2;
+            agent.sprite.setPosition(newX, newY);
+        } else {
+            console.log("Cannot move to the unwalkable tile or out of bounds");
+        }
+    }
+}
+
+function emitAgentLocation(agent) {
+    if (agent) {
+        var agentLocation = {
+            name: agent.name,
+            x: agent.sprite.x,
+            y: agent.sprite.y,
+        };
+        console.log('Agent location:', agentLocation);
     } else {
         console.warn('Agent is not defined yet.');
     }
 }
 
-function preload() {
-    console.log('Loading assets...');
-    this.load.image('grass', 'assets/grass.png');
-    this.load.image('house1', 'assets/house1.png');
-    this.load.image('school', 'assets/school.png');
-    this.load.spritesheet('dude', 'assets/person.png', { frameWidth: 300, frameHeight: 400 });
-}
-
-// Define the `agent` variable and other variables
-var agent, objects = [], cursors, target, path = [], pathIndex = 0, grid, pathGraphics, easystar, moveToTarget = false, lastPathCalculationTime = 0;
-var pathCalculationInterval = 1000; // Recalculate path every 1000 ms
-
-// Create the game scene
-function create() {
-    this.add.tileSprite(0, 0, config.width, config.height, 'grass').setOrigin(0, 0);
-    grid = createGrid(28, 16);
-    easystar = new EasyStar.js();
-    easystar.setGrid(grid);
-    easystar.setAcceptableTiles([0]);
-
-    // Add houses
-    addObject.call(this, 200, 300, 'house1', 'house1');
-    addObject.call(this, 600, 400, 'house2', 'house1');
-    addObject.call(this, 900, 600, 'house3', 'house1');
-    
-    // Add the school
-    addObject.call(this, 800, 100, 'school1', 'school');
-
-    // Initialize agent
-    agent = this.physics.add.sprite(25, 25, 'dude');
-    agent.setCollideWorldBounds(true);
-    agent.setScale(0.25);
-    this.anims.create({
-        key: 'left',
-        frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
-        frameRate: 10,
-        repeat: -1
+// Function to print the grid in the console
+function printGrid() {
+    console.log("Grid:");
+    grid.forEach((row, rowIndex) => {
+        console.log(`Row ${rowIndex}:`, row.join(' '));
     });
-    this.anims.create({
-        key: 'turn',
-        frames: [{ key: 'dude', frame: 4 }],
-        frameRate: 20
-    });
-    this.anims.create({
-        key: 'right',
-        frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
-        frameRate: 10,
-        repeat: -1
-    });
-
-    // Collision detection
-    objects.forEach(object => {
-        this.physics.add.collider(agent, object.sprite, handleCollision, null, this);
-    });
-
-    cursors = this.input.keyboard.createCursorKeys();
-    pathGraphics = this.add.graphics();
-    drawGrid.call(this);
-
-    // Keyboard input handling
-    this.input.keyboard.on('keydown', (event) => {
-        switch (event.key) {
-            case '1': setTargetObject.call(this, 'house1'); break;
-            case '2': setTargetObject.call(this, 'house2'); break;
-            case '3': setTargetObject.call(this, 'house3'); break;
-            case '5': setTargetObject.call(this, 'school1'); break;
-            case '6': setTargetBottomRight.call(this); break;
-        }
-    });
-
-    // Start emitting agent location after agent is defined
-    setInterval(emitAgentLocation, 4000); // Emit every 4 seconds
-}
-
-// Game update loop
-function update(time, delta) {
-    if (moveToTarget && path && path.length > 0 && pathIndex < path.length) {
-        var targetCell = path[pathIndex];
-        var targetX = targetCell.x * 50 + 25;
-        var targetY = targetCell.y * 50 + 25;
-        if (Phaser.Math.Distance.Between(agent.x, agent.y, targetX, targetY) < 10) {
-            pathIndex++;
-        } else {
-            this.physics.moveTo(agent, targetX, targetY, 160);
-        }
-    } else {
-        agent.setVelocity(0);
-        agent.anims.play('turn');
-    }
-    if (moveToTarget && time > lastPathCalculationTime + pathCalculationInterval) {
-        calculatePath.call(this);
-        lastPathCalculationTime = time;
-    }
-}
-
-// Additional helper functions...
-
-function addObject(x, y, id, image) {
-    var object = { id: id, sprite: this.physics.add.image(x, y, image).setImmovable(true).setScale(0.5) };
-    objects.push(object);
-    var objX = Math.floor(x / 50);
-    var objY = Math.floor(y / 50);
-    grid[objY][objX] = 1;
-}
-
-function createGrid(cols, rows) {
-    var grid = [];
-    for (var y = 0; y < rows; y++) {
-        var row = [];
-        for (var x = 0; x < cols; x++) {
-            row.push(0);
-        }
-        grid.push(row);
-    }
-    return grid;
-}
-
-function setTargetObject(objectId) {
-    var object = objects.find(obj => obj.id === objectId);
-    if (object) {
-        var objX = Math.floor(object.sprite.x / 50);
-        var objY = Math.floor(object.sprite.y / 50);
-        target = new Phaser.Math.Vector2(objX * 50 + 25, (objY + 1) * 50 + 25);
-        moveToTarget = true;
-        calculatePath.call(this);
-    }
-}
-
-function setTargetBottomRight() {
-    target = new Phaser.Math.Vector2(config.width - 25, config.height - 25);
-    moveToTarget = true;
-    calculatePath.call(this);
-}
-
-function calculatePath() {
-    grid = createGrid(28, 16);
-    objects.forEach(object => {
-        var objX = Math.floor(object.sprite.x / 50);
-        var objY = Math.floor(object.sprite.y / 50);
-        grid[objY][objX] = 1;
-    });
-    drawGrid.call(this);
-    easystar.setGrid(grid);
-    var start = { x: Math.floor(agent.x / 50), y: Math.floor(agent.y / 50) };
-    var end = { x: Math.floor(target.x / 50), y: Math.floor(target.y / 50) };
-    easystar.findPath(start.x, start.y, end.x, end.y, function (newPath) {
-        if (newPath === null) {
-            console.log("Path was not found.");
-        } else {
-            path = newPath.map(point => ({ x: point.x, y: point.y }));
-            pathIndex = 0;
-            console.log('Path:', path);
-        }
-    }.bind(this));
-    easystar.calculate();
-}
-
-function drawGrid() {
-    for (var y = 0; y < grid.length; y++) {
-        for (var x = 0; x < grid[y].length; x++) {
-            var color = grid[y][x] === 1 ? 0xff0000 : 0x00ff00;
-            this.add.rectangle(x * 50 + 25, y * 50 + 25, 50, 50).setStrokeStyle(2, color).setOrigin(0.5);
-        }
-    }
-}
-
-function handleCollision(agent, object) {
-    calculatePath.call(this);
 }
 
 
 
-//how many grids the agent can walk for within certain timeframe 15 mins maybe
-//how to enter a house or  a bar
-//given the location the agent can walk into the house by itself
+
+
+
+// Commented out additional helper functions for pathfinding and collision handling
+// function createGrid(collisionMap) {
+//     return collisionMap; // Assuming the collisionMap is already in the correct format
+// }
+
+// function calculatePath() {
+//     easystar.setGrid(grid);
+//     var start = { x: Math.floor(agent.x / 50), y: Math.floor(agent.y / 50) };
+//     var end = { x: Math.floor(target.x / 50), y: Math.floor(target.y / 50) };
+//     easystar.findPath(start.x, start.y, end.x, end.y, function (newPath) {
+//         if (newPath === null) {
+//             console.log("Path was not found.");
+//         } else {
+//             path = newPath.map(point => ({ x: point.x, y: point.y }));
+//             pathIndex = 0;
+//             console.log('Path:', path);
+//         }
+//     }.bind(this));
+//     easystar.calculate();
+// }
+
+
+
+// const io = require('socket.io-client');
+// const EasyStar = require('easystarjs');
+// // Socket.io client setup
+// const socket = io('http://localhost:4000');
+
+// socket.on('connect', () => {
+//     console.log('Connected to the server');
+//     socket.emit('testConnection', 'Hello, server!', (response) => {
+//         console.log('Server acknowledged with:', response);
+//     });
+// });
+
+// socket.on('disconnect', () => {
+//     console.log('Disconnected from the server');
+// });
+
+// socket.on('updateLocation', (location) => {
+//     console.log('Updated location received:', location);
+// });
+
